@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AirPulse+ | Contactless Vital Sign Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="brand">AIRPULSE<span>+</span></div>
+      <div class="subtitle">AI-Powered Contactless Vital Sign Detection Using Wi-Fi Signals</div>
+    </div>
+    <div class="badge"><span class="dot"></span> SOFTWARE SIMULATION</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Contactless Vital Monitoring</h1>
+        <p>Change the simulated person's pose and watch the synthetic Wi-Fi sensing pipeline update the readings in real time.</p>
+      </div>
+      <div class="live"><span></span> LIVE</div>
+    </section>
+
+    <section class="layout">
+      <div class="card person-card">
+        <div class="card-title">PERSON / POSE</div>
+        <div class="pose-area">
+          <div class="person" id="person">
+            <div class="head"></div><div class="body"></div>
+            <div class="arm left"></div><div class="arm right"></div>
+            <div class="leg left"></div><div class="leg right"></div>
+          </div>
+          <div class="pose-info">
+            <div class="pose-name" id="poseName">Standing</div>
+            <div id="poseDescription">Stable upright posture</div>
+          </div>
+        </div>
+        <div class="pose-buttons">
+          <button data-pose="standing">Standing</button>
+          <button data-pose="sitting">Sitting</button>
+          <button data-pose="walking">Walking</button>
+          <button data-pose="running">Running</button>
+          <button data-pose="lying">Lying</button>
+          <button data-pose="sleeping">Sleeping</button>
+        </div>
+      </div>
+
+      <div class="vitals">
+        <div class="metric heart">
+          <div class="metric-icon">♥</div>
+          <div><div class="label">HEART RATE</div><div><span id="heart">72</span> <small>BPM</small></div></div>
+        </div>
+        <div class="metric breath">
+          <div class="metric-icon">◉</div>
+          <div><div class="label">RESPIRATION</div><div><span id="resp">15</span> <small>BREATH/MIN</small></div></div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon">↝</div>
+          <div><div class="label">MOTION</div><div><span id="motion">8</span> <small>%</small></div></div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon">⌁</div>
+          <div><div class="label">SIGNAL QUALITY</div><div><span id="quality">94</span> <small>%</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lower">
+      <div class="card chart-card">
+        <div class="card-head"><div class="card-title">SIMULATED WI-FI / CSI SIGNAL</div><div class="status" id="status">Normal</div></div>
+        <canvas id="chart"></canvas>
+        <div class="chart-note">Synthetic demonstration signal — not a medical measurement.</div>
+      </div>
+
+      <div class="card summary">
+        <div class="card-title">SYSTEM SUMMARY</div>
+        <div class="summary-row"><span>Selected pose</span><b id="sPose">Standing</b></div>
+        <div class="summary-row"><span>Activity state</span><b id="sStatus">Normal</b></div>
+        <div class="summary-row"><span>Data source</span><b>Simulated CSI</b></div>
+        <div class="summary-row"><span>Hardware</span><b>None</b></div>
+        <div class="summary-row"><span>Update rate</span><b>1 second</b></div>
+        <div class="notice">Prototype architecture is ready for future CSI hardware integration.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>AirPulse+ Prototype • Educational software demonstration • Simulated data only</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
